@@ -1,16 +1,10 @@
-const signInBtn = document.getElementById("signIn");
-const signUpBtn = document.getElementById("signUp");
-const fistForm = document.getElementById("form1");
-const secondForm = document.getElementById("form2");
-const container = document.querySelector(".container");
+const switchers = [...document.querySelectorAll(".switcher")];
 
-signInBtn.addEventListener("click", () => {
-  container.classList.remove("right-panel-active");
+switchers.forEach((item) => {
+  item.addEventListener("click", function () {
+    switchers.forEach((item) =>
+      item.parentElement.classList.remove("is-active")
+    );
+    this.parentElement.classList.add("is-active");
+  });
 });
-
-signUpBtn.addEventListener("click", () => {
-  container.classList.add("right-panel-active");
-});
-
-fistForm.addEventListener("submit", (e) => console.log("hi"));
-secondForm.addEventListener("submit", (e) => e.preventDefault());

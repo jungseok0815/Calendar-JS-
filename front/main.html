@@ -5,50 +5,55 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="../front//main.css">
- 
+  <link rel="stylesheet" href="/front//main.css">
 </head>
 <body>
-  <!-- <div class="container right-panel-active">
-   Sign Up 
-    <div class="container__form container--signup">
-      <form method="POST" action="/join" class="form" id="form1">
-        <h2 class="form__title">회원가입</h2>
-        <input type="text" name="name" placeholder="UserName" class="input" />
-        <input type="email" name="email" placeholder="Email" class="input" />
-        <input type="password" name="pw" placeholder="Password" class="input" />
-        <button class="btn">회원가입</button>
-      </form>
-      
-    </div> -->
-
-    <!-- Sign In -->
-    <div class="container__form container--signin">
-      <form method="POST" action="/login" class="form" id="form2">
-        <h2 class="form__title">로그인</h2>
-        <input type="email" name="email"placeholder="Email" class="input" />
-        <input type="password" name="pw"placeholder="Password" class="input" />
-        <a href="#" class="link">회원이 아니신가요?</a>
-        <button class="btn">로그인</button>
-      </form>
-      
-    </div>
-
-<!--     
-    <div class="container__overlay">
-      <div class="overlay">
-        <div class="overlay__panel overlay--left">
-          <button class="btn" id="signIn">로그인</button>
-        </div>
-        <div class="overlay__panel overlay--right">
-          <button class="btn" id="signUp">회원가입</button>
-        </div>
+  <section class="forms-section">
+    <h1 class="section-title">Animated Forms</h1>
+    <div class="forms">
+      <div class="form-wrapper is-active">
+        <button type="button" class="switcher switcher-login">
+          Login
+          <span class="underline"></span>
+        </button>
+        <form method="POST" action="/login" class="form form-login">
+          <fieldset>
+            <legend>Please, enter your email and password for login.</legend>
+            <div class="input-block">
+              <label for="login-email">E-mail</label>
+              <input id="login-email" name="email"type="email" required>
+            </div>
+            <div class="input-block">
+              <label for="login-password">Password</label>
+              <input id="login-password" name="pw" type="password" required>
+            </div>
+          </fieldset>
+          <button type="submit" class="btn-login">Login</button>
+        </form>
       </div>
-      -->
-      
+      <div class="form-wrapper">
+        <button type="button" class="switcher switcher-signup">
+          Sign Up
+          <span class="underline"></span>
+        </button>
+        <form class="form form-signup" method="POST" action="/join">
+          <fieldset>
+            <legend>Please, enter your email, password and password confirmation for sign up.</legend>
+            <div class="input-block">
+              <label for="signup-email">E-mail</label>
+              <input id="signup-email"name="email"type="email" required>
+            </div>
+            <div class="input-block">
+              <label for="signup-password">Password</label>
+              <input id="signup-password" name="pw" type="password" required>
+            </div>
+            
+          </fieldset>
+          <button type="submit" class="btn-signup">Continue</button>
+        </form>
+      </div>
     </div>
-  </div> 
- 
- 
+  </section>
+  <script src="/front//main.js"></script>
 </body>
 </html>

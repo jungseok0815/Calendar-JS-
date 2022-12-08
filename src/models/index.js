@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize");
 const User = require("./userModel");
-
+const Data = require("./data");
 const env = process.env.NODE_ENV || "development";
 const config = require(__dirname + "/../../config/config.json")[env];
 const db = {};
@@ -12,11 +12,13 @@ const sequelize = new Sequelize(
   config
 );
 
+db.Dat = Data;
 db.User = User;
 db.sequelize = sequelize;
 
 User.init(sequelize);
+Data.init(sequelize);
 
 User.associate(db);
-
+Data.associate(db);
 module.exports = db;
