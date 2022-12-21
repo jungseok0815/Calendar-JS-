@@ -5,10 +5,14 @@ module.exports.home = async (req, res) => {
   return res.sendFile(path.join(__dirname + "../../../front/main.html"));
 };
 module.exports.claendar = async (req, res) => {
-  return res.sendFile(path.join(__dirname + "../../../front/calendar.html"));
+  return res.sendFile(
+    path.join(__dirname + "../../../front/goglecalendar.html")
+  );
 };
 module.exports.postJoin = async (req, res) => {
+  //회원가입 기능구현
   const { email, pw } = req.body;
+  s;
   console.log(req.body);
   // if (email || pw === null) {
   //   console.log("아이디와 비밀번호를 입력해주세요");
@@ -32,6 +36,7 @@ module.exports.postJoin = async (req, res) => {
 //};
 
 module.exports.postLogin = async (req, res, next) => {
+  //로그인 기능 구현
   const { email, pw } = req.body;
   console.log(req.body);
   console.log(email, pw);

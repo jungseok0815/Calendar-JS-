@@ -1,4 +1,4 @@
-const Sequelize = require("sequelize");
+const Sequelize = require("sequelize"); //시퀄라이즈를 사용하기위해
 const User = require("./userModel");
 const Data = require("./data");
 const env = process.env.NODE_ENV || "development";
